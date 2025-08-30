@@ -1,0 +1,271 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Premium Roofing Company Design System - Ruiru Mabati
+All colors, gradients, fonts, shadows, and animations defined here.
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Brand Colors - Premium Construction Palette */
+    --background: 0 0% 100%;
+    --foreground: 215 25% 15%;
+
+    /* Cards & Surfaces */
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 15%;
+    --card-elevated: 220 15% 98%;
+
+    /* Popover Components */
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 15%;
+
+    /* Primary Brand - Deep Professional Blue */
+    --primary: 215 85% 25%;
+    --primary-light: 215 75% 35%;
+    --primary-dark: 215 95% 15%;
+    --primary-foreground: 0 0% 98%;
+
+    /* Secondary - Metallic Steel */
+    --secondary: 220 15% 92%;
+    --secondary-dark: 220 20% 85%;
+    --secondary-foreground: 215 25% 25%;
+
+    /* Accent - Warm Construction Orange */
+    --accent: 25 95% 55%;
+    --accent-light: 25 85% 65%;
+    --accent-foreground: 0 0% 98%;
+
+    /* Muted Tones */
+    --muted: 220 15% 96%;
+    --muted-foreground: 215 15% 45%;
+
+    /* Success - Construction Green */
+    --success: 145 65% 45%;
+    --success-foreground: 0 0% 98%;
+
+    /* Warning - Safety Yellow */
+    --warning: 45 95% 55%;
+    --warning-foreground: 215 25% 15%;
+
+    /* Destructive States */
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Borders & Inputs */
+    --border: 220 20% 88%;
+    --border-strong: 220 25% 75%;
+    --input: 220 15% 95%;
+    --ring: 215 85% 25%;
+
+    /* Premium Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(215 85% 25%), hsl(215 75% 35%));
+    --gradient-hero: linear-gradient(135deg, hsl(215 95% 15%) 0%, hsl(215 85% 25%) 50%, hsl(215 75% 35%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(220 15% 98%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(25 95% 55%), hsl(25 85% 65%));
+
+    /* Premium Shadows */
+    --shadow-sm: 0 2px 4px -1px hsl(215 25% 15% / 0.1);
+    --shadow-md: 0 4px 16px -4px hsl(215 25% 15% / 0.15);
+    --shadow-lg: 0 12px 32px -8px hsl(215 25% 15% / 0.2);
+    --shadow-xl: 0 20px 48px -12px hsl(215 25% 15% / 0.25);
+    --shadow-primary: 0 8px 24px -6px hsl(215 85% 25% / 0.3);
+    --shadow-accent: 0 8px 24px -6px hsl(25 95% 55% / 0.3);
+
+    /* Glass Effects */
+    --glass-bg: hsl(0 0% 100% / 0.85);
+    --glass-border: hsl(220 20% 88% / 0.6);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.75rem;
+    --radius-lg: 1rem;
+    --radius-xl: 1.5rem;
+  }
+
+  .dark {
+    /* Dark mode for premium construction site */
+    --background: 215 25% 8%;
+    --foreground: 220 15% 95%;
+
+    --card: 215 20% 12%;
+    --card-foreground: 220 15% 95%;
+    --card-elevated: 215 25% 15%;
+
+    --popover: 215 20% 12%;
+    --popover-foreground: 220 15% 95%;
+
+    --primary: 215 75% 55%;
+    --primary-light: 215 65% 65%;
+    --primary-dark: 215 85% 45%;
+    --primary-foreground: 215 25% 8%;
+
+    --secondary: 220 15% 18%;
+    --secondary-dark: 220 20% 15%;
+    --secondary-foreground: 220 15% 85%;
+
+    --accent: 25 85% 55%;
+    --accent-light: 25 75% 65%;
+    --accent-foreground: 215 25% 8%;
+
+    --muted: 220 15% 15%;
+    --muted-foreground: 220 10% 55%;
+
+    --success: 145 55% 55%;
+    --success-foreground: 215 25% 8%;
+
+    --warning: 45 85% 65%;
+    --warning-foreground: 215 25% 8%;
+
+    --destructive: 0 65% 55%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 20% 20%;
+    --border-strong: 220 25% 30%;
+    --input: 220 15% 15%;
+    --ring: 215 75% 55%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(215 85% 45%), hsl(215 75% 55%));
+    --gradient-hero: linear-gradient(135deg, hsl(215 25% 8%) 0%, hsl(215 20% 12%) 50%, hsl(215 75% 55%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(215 20% 12%) 0%, hsl(215 25% 15%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(25 85% 55%), hsl(25 75% 65%));
+
+    --shadow-sm: 0 2px 4px -1px hsl(0 0% 0% / 0.3);
+    --shadow-md: 0 4px 16px -4px hsl(0 0% 0% / 0.4);
+    --shadow-lg: 0 12px 32px -8px hsl(0 0% 0% / 0.5);
+    --shadow-xl: 0 20px 48px -12px hsl(0 0% 0% / 0.6);
+    --shadow-primary: 0 8px 24px -6px hsl(215 75% 55% / 0.4);
+    --shadow-accent: 0 8px 24px -6px hsl(25 85% 55% / 0.4);
+
+    --glass-bg: hsl(215 20% 12% / 0.85);
+    --glass-border: hsl(220 20% 30% / 0.6);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  /* Premium Typography */
+  .heading-display {
+    @apply text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight;
+  }
+
+  .heading-xl {
+    @apply text-4xl md:text-5xl font-bold tracking-tight;
+  }
+
+  .heading-lg {
+    @apply text-3xl md:text-4xl font-bold tracking-tight;
+  }
+
+  .heading-md {
+    @apply text-2xl md:text-3xl font-semibold tracking-tight;
+  }
+
+  .heading-sm {
+    @apply text-xl md:text-2xl font-semibold tracking-tight;
+  }
+
+  .body-lg {
+    @apply text-lg md:text-xl leading-relaxed;
+  }
+
+  .body-md {
+    @apply text-base md:text-lg leading-relaxed;
+  }
+
+  /* Premium Effects */
+  .glass-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
+
+  .shadow-premium {
+    box-shadow: var(--shadow-lg);
+  }
+
+  .shadow-primary-glow {
+    box-shadow: var(--shadow-primary);
+  }
+
+  .shadow-accent-glow {
+    box-shadow: var(--shadow-accent);
+  }
+
+  /* Hover Effects */
+  .hover-lift {
+    transition: var(--transition-smooth);
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+  }
+
+  .hover-scale {
+    transition: var(--transition-smooth);
+  }
+
+  .hover-scale:hover {
+    transform: scale(1.05);
+  }
+
+  /* Interactive Elements */
+  .floating-whatsapp {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 1000;
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+  }
+
+  /* Loading States */
+  .shimmer {
+    background: linear-gradient(
+      90deg,
+      hsl(var(--muted)) 0%,
+      hsl(var(--muted-foreground) / 0.1) 50%,
+      hsl(var(--muted)) 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+  }
+
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+}
